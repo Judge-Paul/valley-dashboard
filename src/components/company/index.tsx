@@ -33,7 +33,7 @@ export default function Company() {
       website: "",
       linkedin: "",
       industry: "",
-      employees: "",
+      employees: "one_to_ten",
       desc: "",
       goals: "",
       headquarters: "",
@@ -69,7 +69,7 @@ export default function Company() {
         >
           <div className="flex w-full flex-wrap-reverse justify-between md:flex-nowrap">
             <div className="flex gap-6 sm:gap-7">
-              <Image src={Logo} alt="Sixteen Logo" className="size-24" />
+              <Image src={Logo} alt="Sixteen Logo" className="size-24 md:size-28" />
               <div className="my-auto">
                 <div className="mb-1.5 flex max-w-max gap-1.5 sm:gap-3">
                   <Button variant="destructive" onClick={showUnavailable}>

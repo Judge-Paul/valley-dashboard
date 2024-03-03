@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Company from "@/components/company";
+import NotAvailable from "@/components/NotAvailable";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,8 +23,20 @@ export default function Home() {
             </span>
           </TabsList>
         </nav>
+        <TabsContent value="profile">
+          <NotAvailable />
+        </TabsContent>
         <TabsContent value="company" className="w-full sm:p-4">
           <Company />
+        </TabsContent>
+        <TabsContent value="seats">
+          <NotAvailable />
+        </TabsContent>
+        <TabsContent value="contact">
+          <NotAvailable />
+        </TabsContent>
+        <TabsContent value="integrations">
+          <NotAvailable />
         </TabsContent>
       </Tabs>
     </main>
