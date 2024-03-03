@@ -107,13 +107,13 @@ export default function Company() {
             <FormInputLabel
               control={form.control}
               name="website"
-              type="url"
+              type="text"
               label="Company's Website"
             />
             <FormInputLabel
               control={form.control}
               name="linkedin"
-              type="url"
+              type="text"
               label="Company's Linkedin"
             />
             <FormInputLabel
@@ -229,7 +229,7 @@ export default function Company() {
             <FormInputLabel
               control={form.control}
               name="faqs"
-              type="url"
+              type="text"
               label="FAQs"
             />
           </div>
