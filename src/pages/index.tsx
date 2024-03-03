@@ -12,17 +12,13 @@ export default function Home() {
     <main className={cn("mx-auto max-w-6xl px-4 py-10", inter.className)}>
       <h1 className="text-3xl font-semibold">Settings</h1>
       <Tabs defaultValue="company" className="mt-8">
-        <nav className="w-full">
-          <TabsList className="text-[0.2rem]">
-            <TabsTrigger value="profile">Your Profile</TabsTrigger>
-            <TabsTrigger value="company">Company Info</TabsTrigger>
-            <TabsTrigger value="seats">Manage Seats</TabsTrigger>
-            <span className="hidden sm:flex">
-              <TabsTrigger value="contact">Do not Contact</TabsTrigger>
-              <TabsTrigger value="integrations">Integrations</TabsTrigger>
-            </span>
-          </TabsList>
-        </nav>
+        <TabsList className="flex w-full overflow-x-auto md:w-max">
+          <TabsTrigger value="profile">Your Profile</TabsTrigger>
+          <TabsTrigger value="company">Company Info</TabsTrigger>
+          <TabsTrigger value="seats">Manage Seats</TabsTrigger>
+          <TabsTrigger value="contact">Do not Contact</TabsTrigger>
+          <TabsTrigger value="integrations">Integrations</TabsTrigger>
+        </TabsList>
         <TabsContent value="profile">
           <NotAvailable />
         </TabsContent>
