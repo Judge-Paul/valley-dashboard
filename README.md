@@ -1,40 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Valley Dashboard
 
-## Getting Started
+Valley Dashboard Challenge Built with Next.js(Pages Router), shadcn, tailwind, zod, react-hook-form and typescript.
 
-First, run the development server:
+![Screenshot of Dashboard](.github/dashboard.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The primary content is displayed within a tab labeled "Company Info" (https://ui.shadcn.com/docs/components/tabs).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Form and Buttons
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+All content outside the tab navigation and heading is wrapped in a form. The "Save changes" button submits the form, while the "Cancel" button clears current form values. While a "Cancel" button typically returns to the previous page, this functionality wasn't requested but I think it makes a great addition.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Form Validation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Form validation is implemented using [react hook form](https://react-hook-form.com/) and [zod](https://zod.dev/).
 
-## Learn More
+### Responsiveness
 
-To learn more about Next.js, take a look at the following resources:
+The layout adapts to different screen sizes:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Mobile:**
+  - The navigation menu becomes scrollable.
+  - Each input is placed on a separate row.
+  - "Save changes" and "Cancel" buttons occupy an entire row for better usability.
+- **Wider Screens:** A maximum width is set for the main element to prevent content from stretching beyond a reasonable width.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Styling Constraints
 
-## Deploy on Vercel
+Due to constraints, no additional styling is applied to the existing shadcn components. However, exceptions were made for:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Buttons:** "Save changes" and "Cancel" buttons are adjusted to occupy an entire row on mobile.
+- **TabList:** The default `items-center` and `justify-center` styles are removed from the `TabList` component.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Future Enhancements
+
+To further enhance the visual appeal, the following design elements could be implemented:
+
+- Rounding the corners of the employee toggle buttons.
+- Applying appropriate background colors to the toggle buttons when selected.
+- Adding a background gradient to the "Save changes" and "Remove" buttons.
